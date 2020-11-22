@@ -14,6 +14,7 @@ class Kernel extends ConsoleKernel
      */
     protected $commands = [
         //
+        \Laravel\Tinker\Console\TinkerCommand::class,
     ];
 
     /**

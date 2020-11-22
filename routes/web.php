@@ -17,3 +17,13 @@ $router->get('/', function () use ($router) {
     // return $router->app->version();
     echo "siema lumen";
 });
+
+// $router->get('/key', function () {
+//     return \Illuminate\Support\Str::random(32);
+// });
+
+$router->group(['prefix' => 'api'], function() use($router){
+    
+    $router->post('register-user', 'UserController@register');
+    $router->post('login','UserController@login');
+});
